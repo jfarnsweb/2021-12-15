@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+  </head>
+  <body>
+
+
+
+
+    <!-- Side navigation -->
+ <div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="experience.html">Experience</a>
+  <a href="skills.html">Skills</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <h1>Contact Me</h1>
+          <form action="http://form-test.slccwebdev.com/form-contact.php" method="post">
+              <div class="form_settings">
+                  <p><label>Name: </label><input class="contact" type="text" name="name" /></p>
+                  <p><label>Email Address: </label>
+                      <input class="contact" type="text" name="email" /></p>
+                   <p><label>Phone Number: </label>
+                       <input type="phone" name="phone" /></p>
+                  <p><label>Comments: </label>
+                      <br>
+                      <textarea class="contact textarea" rows="8" cols="40" name="inquiry">
+  Enter your comments here.
+                      </textarea></p>
+                      <div>
+                          <p>Can I contact you?</p>
+                          <input id="yes" type="radio" name="contact-back" value="Yes">
+                          <label for="Yes">Yes</label>
+                          <input id="no" type="radio" name="contact-back" value="No">
+                          <label for="No">No</label>
+                      </div>
+                      <div>
+                          <p>Best Contact Method(s)</p>
+                          <input id="contactphone" type="checkbox" name="contact-phone" value="Phone">
+                          <label for='contactphone'>Phone</label>
+                          <input id="contactemail" type="checkbox" name="contact-email" value="Email">
+                          <label for='contactemail'>Email</label>
+                          <input id="contacttext" type="checkbox" name="contact-text" value="Text">
+                          <label for='contacttext'>Text</label>
+                      </div>
+                  <p style="padding-top: 15px"><span>&nbsp;</span>
+                      <input class="submit" type="submit" name="contact_submitted" value="Submit" /></p>
+                  
+              </div>
+  
+          </form>
+</div> 
+
+
+
+
+<div class="footer">
+<p>Copyright © 2021</p>
+</div>
+
+
+
+
+ 
+  </body>
+</html>
