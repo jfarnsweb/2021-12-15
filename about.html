@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About Page</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+   
+  </head>
+  <body>
+
+
+    <!-- Side navigation -->
+ <div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="experience.html">Experience</a>
+  <a href="skills.html">Skills</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+  <a href="about.html">About</a>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <h1>Education</h1>
+  <p>Bachelor’s degree in Psychology with a minor in Business Brigham Young University, Provo</p>
+ 
+  <h1>Hobbies & Interests</h1>
+    <p>Photography & Crafts</p>
+
+    <br>
+    <h2>References</h2>
+
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First</th>
+          <th>Last</th>
+          <th>Relationship</th>
+        </tr>
+      </thead>
+      <tbody id="tbRefers">
+                
+      </tbody>
+    </table>
+        
+    
+    <script>
+      
+      const references = [
+        {
+          first: 'Eve',
+          last: 'Flake',
+          relationship: 'Sister',
+        },
+        {
+          first: 'Lee',
+          last: 'Miller',
+          relationship: 'Sister',
+        },
+        {
+          first: 'Debra',
+          last: 'Durling',
+          relationship: 'Sister',
+        },
+        {
+          first: 'Denise',
+          last: 'Dansie',
+          relationship: 'Friend',
+        }
+      ]
+
+      for(let i = 0; i < references.length; i++) {
+        let reference = references[i]
+      }
+
+      let tbRefers = document.getElementById('tbRefers')
+      references.forEach((reference, index) => {
+        let trowRefer = document.createElement('tr')
+        let number = document.createElement('td')
+        let first = document.createElement('td')
+        let last = document.createElement('td')
+        let relationship = document.createElement('td')
+        number.innerHTML = index + 1
+        first.innerHTML = reference.first
+        last.innerHTML = reference.last
+        relationship.innerHTML = reference.relationship
+        trowRefer.append(number)
+        trowRefer.append(first)
+        trowRefer.append(last)
+        trowRefer.append(relationship)
+        tbRefers.append(trowRefer)
+      })
+
+
+    </script>
+
+    <br>
+
+    <div>
+      <h2 id="h2JobExperience">Job Experience</h2>
+      <ul id="ulJobExperience">
+        <li>
+          BYU Institutional Laundry/Textile Cleaning Services - Project Coordinator
+        </li>
+        <li>
+          Jones, Waldo, Holbrook & McDonugh - Accounting Clerk /Special Project
+        </li>
+        <li>
+          Fidelity Investments - Team leader
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      
+        $('#h2JobExperience').click(e => {
+          $('#ulJobExperience').toggle()
+        })
+            
+    </script>
+
+    <br>
+
+    <form name="registration">
+      <input id="firstname" type="text" name="firstname" placeholder="firstname..." />
+      <br>
+      <input id="inpReference" type="email" name="email" placeholder="email..." />
+      <br>
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      $("form[name='registration']").validate({
+        rules: {
+          firstname: {
+            required: true,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          
+        },
+        messages: {
+          firstname: "Please enter your firstname.",
+          email: "Please enter a valid email."
+        },
+        sumbitHandler: function(form) {
+          form.submit();
+        }
+      });
+    </script>
+
+    
+
+ 
+    
+        
+
+
+</div> 
+
+
+
+
+
+
+<div class="footer">
+<p>Copyright © 2021</p>
+</div>
+
+
+
+
+  </body>
+</html>
